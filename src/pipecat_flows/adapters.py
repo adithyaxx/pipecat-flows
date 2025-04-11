@@ -655,7 +655,7 @@ def create_adapter(llm) -> LLMAdapter:
         logger.debug("Creating Google adapter")
         return GeminiAdapter()
 
-    if llm_type == "BedrockLLMService":
+    if llm_type == "BedrockLLMService" or llm_type == "BedrockRealtimeLLMService":
         logger.debug("Creating Bedrock adapter")
         return BedrockAdapter()
 
